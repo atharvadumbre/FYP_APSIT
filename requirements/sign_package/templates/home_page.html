@@ -1,0 +1,50 @@
+{% extends "Layouts/layout.html" %}
+{% block content %}
+
+
+		<div class="container">
+
+			<div class = "container text-center mt-5 shadow-lg p-3 mb-5 border border-dark rounded rounded-3" >
+				<h1 class="my-5 fw-bold ">What is SignGuru ?</h1>
+					<div class="container d-flex mb-4">
+						<img class="border border-dark rounded-pill mx-5" src= "{{url_for('static', filename = 'images/home_image.png')}}" width="25%" height="250px">
+						<p class="mx-5" style="display: flex;justify-content: center;align-items: center;font-weight: bold;">
+					SignGuru is an online educational platform where sign-language will
+				be taught. People may become familiar with the sign language. The lessons will be intuitive and the learner will 
+				definitely enjoy the session. There will be short courses in which each course will have sign language from different regions. 
+				Learner can select the language of his choice. 
+						</p>
+					</div>
+			</div>	
+	
+
+			<div class = "container mb-4 text-center shadow-lg p-3 mb-5 border border-dark rounded-pill">
+				<h2>What you will learn :</h2>
+				<p class="w-auto text-center">
+					&emsp;This course will cover the basics of sign-language like alphabets and numbers.
+			Currently Indian Sign-language is available . In the future we will introduce the sign language of different regions like ASL.
+			The progress of learner will be tracked and several achievement tokens will be 
+			given to the learner as the course progresses. 
+				</p>
+			</div>	
+
+
+			{% if current_user.is_authenticated %}
+
+			{% else %}
+			<div class = "container text-center shadow-lg p-3 mb-5 border border-dark rounded rounded-3">
+				<h2>Interested?</h2>
+				<p class="mb-5">
+					If you want to explore the world of sign language then you can definitely enroll into our course by just creating your account !
+				</p>	
+				<div class="d-grid gap-2 col-4 mx-auto">
+				<a class="btn btn-success mb-4 btn-lg" href="{{ url_for('register') }}">Join Now</a>
+			</div>
+			</div>
+			{% endif %}
+		
+		</div>
+
+
+
+{% endblock content %}

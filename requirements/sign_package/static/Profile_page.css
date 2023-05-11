@@ -1,0 +1,49 @@
+#user_details{
+
+	margin-top:2%;
+	//border:1px solid black;	
+}
+
+#user_details div{
+	//border:1px solid green;
+	display:inline-block;
+	margin-left:44%;
+}
+
+#user_details div p{
+	text-align:center;
+	font-family:Consolas;
+	font-weight:800;
+}
+
+#stats_user{
+
+//	border:1px solid black;
+	
+}
+
+
+#stats_user h3{
+	color:Dodgerblue;
+	//text-align:center;
+}
+
+#content_layout {
+
+
+	/*border:  1px solid green;*/
+	margin: 0 20% ;
+}
+
+#achievement_user ul{
+	
+	list-style-type:none; 
+}
+
+#achievement_user ul li{
+	border:1px solid black;
+	padding:2%;
+	margin-bottom:1%;
+	text-align:center;
+	width:90%;
+}

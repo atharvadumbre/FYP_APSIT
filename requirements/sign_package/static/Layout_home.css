@@ -1,0 +1,154 @@
+#layout{
+
+	//border: 1px solid black;	
+	margin-left:25%;
+	margin-right:20%;
+	//box-shadow: 10px 10px 20px #888888;
+	
+}
+
+
+
+.block_section{
+
+	//border: 2px solid red;
+	color: initial;	
+}
+
+.block_section h2{
+	//color:cornflowerblue;
+	color: rgb(0, 60, 179);
+	font-family:Monospace;
+	font-size:26px;	
+	//border:1px solid red;
+
+}
+
+
+#partition{
+	//border: 2px solid blue;
+}
+
+#partition span{
+	display:inline-block;
+	//border: 1px solid black;
+	
+}
+
+
+#article {
+	
+	width:50%;	
+}
+
+#image{
+	width:40%;
+}
+
+#image img{
+
+	width:90%;
+	box-shadow: 1px 1px 1px black;
+	
+}
+
+.block_section article{
+
+	display: inline-block;
+	font-size:18px;
+	font-family: 'Mukta', sans-serif;
+	font-weight: 400;
+	//border: 1px solid green;
+	margin:0%;
+}
+
+
+.block_section article a{
+
+	text-decoration: none;
+}
+
+
+#hope{
+	font-family: 'Hurricane', cursive;
+	font-size:42px;
+	text-align:center;	
+}
+
+.close-btn{
+	display: inline-block;
+	//border:1px solid green;
+	position : absolute;
+	left:75%;
+	margin:0%;
+	cursor: pointer;
+	font-size: 20px;
+}
+
+//.c_button{display:none;}
+
+/*.c_button:checked{
+
+	#join{
+		display:block;
+	}
+}*/
+
+#Sign_up{
+
+	background-image: url("images/home_image.png");
+	//background-color:blue;
+	border:1px solid green;
+	margin-top: 4%;
+	padding:2%;
+	display:none;
+	transition: display 2s;
+	//text-align:center;
+}
+
+.signup_header{
+	margin-bottom:2%;
+}
+
+#Sign_up h3{
+	display: inline-block;
+//	border:2px solid red;
+	margin:0%;
+}
+
+#Sign_up form{
+	//border: 1px solid green;	
+	width:45%;
+	margin-left: 25%;
+}
+
+
+#Sign_up form label{
+	display:inline-block;
+	width: 30%;
+}
+
+#Sign_up form input{
+	position:relative;
+	width:30%;
+	
+}
+
+.fields{
+	display:block;
+	margin-bottom:4%;
+}
+
+#join{
+
+	border-radius:5px;
+	border: 0px;
+	color:white;
+	font-size: 20px;
+	margin-left:40%;
+	margin-top:2%;
+	background-color:rgb(153, 204, 255);
+	padding: 3% 6%;
+	box-shadow: 3px 3px 4px #888888;
+		
+}

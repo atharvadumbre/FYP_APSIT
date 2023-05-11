@@ -1,0 +1,43 @@
+{% extends "Layouts/layout.html "%}
+{% block content %}
+
+
+		<div class="container mt-5 text-center shadow-lg p-3 mb-5 border border-light rounded rounded-3">
+			
+	
+			<div class="mb-5">
+				<h1>Username : {{ user.username }}</h1>
+			</div>
+			
+
+			<div class="fw-bold">
+
+
+				<p>Name : {{ user.name }}</p>
+				<p>Email : {{user.email}} </p>
+				<p>User Id : {{user.id}} </p>
+
+				<!-- <div id='stats_user'>
+					<h3>Current Course</h3>
+					<h3>Total points</h3>
+					
+				</div> -->
+
+				<!-- <div id='achievement_user'>
+					<h3>Achievements</h3>
+					<ul>
+						<li>Achievement 1</li>
+						<li>Achievement 2</li>
+						<li>Achievement 3</li>
+						<li>Achievement 4</li>
+						<li>Achievement 5</li>
+					</ul>
+					
+				</div> -->
+				<a class="btn btn-primary mt-5" href="/delete">Delete Account</a>	
+			</div>	
+
+
+		</div>
+
+{% endblock content %}

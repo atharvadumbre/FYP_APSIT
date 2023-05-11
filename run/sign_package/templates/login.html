@@ -1,0 +1,58 @@
+{% extends "Layouts/layout.html "%}
+{% block content %}
+
+	<div class="container text-center my-5 shadow-lg pb-5 border border-success rounded rounded-3">		
+		<form method="POST" action="/login">
+
+			{{ form.hidden_tag() }}
+			<div>
+				<h2 class="my-5">Join Today for free</h2>
+				<div >
+
+						<center> 
+					<label>{{ form.username.label(class="fw-bold me-2") }}</label>	
+					
+					{% if form.username.errors %}
+						{{ form.username(class="w-20 mb-3") }}
+
+						{% for error in form.username.errors %}
+							<br><span>{{error}}</span><br>
+						{%endfor%}
+
+					{% else %}
+						{{ form.username(class="w-20 mb-3") }}<br>
+					{% endif %}		
+
+					<!--  -->
+
+					<!--  ////////// -->
+
+
+					{{ form.password.label(class="fw-bold me-2") }} 
+					{% if form.password.errors %}
+						{{ form.password(class="w-20 ms-1") }}
+						{% for error in form.passsword.errors %}
+						<br><span>{{error}}</span><br>
+						{% endfor %}
+
+					{%else%}
+						{{ form.password(class="w-20 ms-1") }}<br>
+					{%endif%}
+					
+
+
+					<input class="btn btn-primary my-3" type="submit" />
+							</center>
+					
+				</div>
+
+			</div>
+		</form>
+		<p class="fw-bold mt-5">Don't have an account?</p>
+		
+			<a class="btn btn-success" href=" {{ url_for('register') }}" />SignUp Now!</a>
+	</div>
+		
+	
+
+{% endblock content %}

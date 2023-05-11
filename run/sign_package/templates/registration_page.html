@@ -1,0 +1,128 @@
+{% extends "Layouts/layout.html"%}
+{% block content %}
+	
+	<div class='container text-center my-5 shadow-lg pb-5 border border-success rounded rounded-3'>		
+		<form method="POST" action="/register">
+
+			{{ forms.hidden_tag() }}
+	
+				<h2 class="fw-bold my-5" >Join Today</h2>
+			
+				<div> 
+
+					
+					{{ forms.name.label(class="fw-bold me-5") }}
+					
+
+					{% if forms.name.errors %}
+						{{ forms.name(class="w-20 mb-3 col-8")
+						 }}
+
+					<div class="invalid-feedback">
+						{% for error in forms.name.errors %}
+							<br><span>{{error}}</span><br>
+						{%endfor%}
+					</div>
+					{% else %}
+						{{ forms.name(class="w-20 mb-3") }}<br>
+					{% endif %}		
+				</div>
+
+
+					<!--  -->
+				 <div class="form-group">
+					{{ forms.username.label(class="fw-bold me-3") }}
+					
+					{% if forms.username.errors %}
+						{{ forms.username(
+							class="w-20 mb-3"
+						) }}
+
+
+					<div class="invalid-feedback">
+						{% for error in forms.username.errors %}
+							<br><span>{{error}}</span><br>
+						{%endfor%}
+					</div>
+					{% else %}
+						{{ forms.username(class="w-20 mb-3") }}<br>
+					{% endif %}		
+				</div>
+					<!--  -->
+
+
+					<div class="form-group">
+					{{ forms.email.label(class="fw-bold me-5") }}
+
+					{% if forms.email.errors %}
+						{{ forms.email(
+							class="w-20 mb-3"
+						) }}
+
+					<div class="invalid-feedback">
+						{% for error in forms.email.errors %}
+						<br><span>{{error}}</span><br>
+						{% endfor %}
+					</div>
+					{%else%}
+						{{ forms.email(class="w-20 mb-3") }}<br>
+					{%endif%}
+				
+				</div>
+
+					<!--  ////////// -->
+
+				<div class="form-group">
+					{{ forms.password.label(class="fw-bold me-4") }} 
+					{% if forms.password.errors %}
+						{{ forms.password(
+							class="w-20 mb-3"
+						) }}
+
+					<div class="invalid-feedback">
+						{% for error in forms.passsword.errors %}
+						<br><span>{{error}}</span><br>
+						{% endfor %}
+					</div>	
+
+					{%else%}
+						{{ forms.password(class="w-20 mb-3") }}<br>
+					{%endif%}
+					</div>
+					<!--  ////////// -->
+
+					<div class="form-group">
+					{{ forms.confirm_password.label(class="fw-bold ms-0") }}
+					{% if forms.confirm_password.errors %}
+						{{ forms.confirm_password(
+							class="w-20 mb-3"
+						) }}
+
+					<div class="invalid-feedback">
+						{% for error in forms.confirm_password.errors %}
+						<br><span>{{error}}</span><br>
+						{% endfor %}
+					</div>
+
+
+					{%else%}
+						{{ forms.confirm_password(class="w-20 mb-3") }}<br>
+					{%endif%}
+				</div>
+				
+				
+					{{ forms.submit(class="btn btn-primary")}}
+					
+			
+			
+
+			
+		</form>
+		<p class="mt-3">Already have an account?</p>
+		<a class="btn btn-success" href=" {{ url_for('login') }}" />Sign In</a>
+	</div>
+		
+
+	
+
+{% endblock content %}

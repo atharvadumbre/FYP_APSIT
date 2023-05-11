@@ -1,0 +1,41 @@
+{% extends "Layouts/layout.html "%}
+{% block content %}
+
+<div class="container text-center shadow-lg pb-5 my-5 border border-dark rounded rounded-3">
+
+  <div>
+    <h1 class="fw-bold mt-3">
+    {{ quiz }}
+  </h1>
+  </div>
+<h2 class="fw-bold my-5">Please Upload Your Image for Detection</h2>
+
+    <form method=""></form>
+    <form method=post enctype=multipart/form-data>
+       
+        <!-- <div class="d-grid gap-2 col-6 mx-auto my-5">
+        <input type="radio" class="btn-check" name="name" id="name" value="numbers" autocomplete="off" >
+        <label class="btn btn-outline-dark btn-lg mb-2" for="name">Numbers</label>
+        
+        <input type="radio" class="btn-check" name="name" id="name1" value="alphabet" autocomplete="off">
+        <label class="btn btn-outline-dark btn-lg" for="name1">Alphabets</label> -->
+        
+        
+        <div class="input-group mt-5">
+        <input type="file" name="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+        <input class="btn btn-success" type="submit" value="Upload" id="inputGroupFileAddon04">
+        </div>
+        </div>
+      </form>
+
+    {% if pred %}
+    <div class="container mt-5 shadow-lg pb-5 my-5 border border-dark rounded rounded-3">
+      <!-- <h3 class="fw-bold mt-3"> The Classified Character is : </h3> -->
+      <h2 class="fw-bolder">{{ pred }}</h4>
+    </div>
+    {% endif %}
+</div>
+
+	
+
+{% endblock content %}

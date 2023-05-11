@@ -1,0 +1,48 @@
+{% extends "Layouts/layout.html "%}
+{% block content %}
+
+<div class="container text-center shadow-lg pb-5 my-5 border border-dark rounded rounded-3">
+  {% if question %}
+
+  <div class="">
+    <h2 class="fw-bold fst-italic mt-5 ">
+    {{ question }}
+  </h2>
+  </div>
+  {% endif %}
+
+<h2 class=" my-5">Please Upload Your Image for Detection</h2>
+
+    <form method=""></form>
+    <form method=post enctype=multipart/form-data>
+       
+        <div class="d-grid gap-2 col-6 mx-auto my-5">
+        <!-- <input type="radio" class="btn-check" name="name" id="name" value="numbers" autocomplete="off" required>
+        <label class="btn btn-outline-dark btn-lg mb-2" for="name">Numbers</label>
+        
+        <input type="radio" class="btn-check" name="name" id="name1" value="alphabet" autocomplete="off">
+        <label class="btn btn-outline-dark btn-lg" for="name1">Alphabets</label> -->
+        
+        <div>
+          <input class="btn btn-success" type="submit" value="Get Question" name="model">
+        </div>
+        
+        <div class="input-group mt-5">
+        <input type="file" name="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+        <input class="btn btn-primary" type="submit" value="Upload" id="inputGroupFileAddon04" name="model">
+        </div>
+        </div>
+      </form>
+
+    {% if pred %}
+    <div class="container mt-5 shadow-lg pb-5 my-5">
+      <!-- <h3 class="fw-bold mt-3"> The Classified Character is : </h3> -->
+      <h2 class="fw-light pt-5">{{ pred }}</h4>
+      <!-- <img src="{{url_for('static', filename = 'uploads/upload_img.jpg')}}" class=" border border-dark border-3"/> -->
+    </div>
+    {% endif %}
+</div>
+
+	
+
+{% endblock content %}
